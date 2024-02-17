@@ -1,0 +1,21 @@
+﻿<Window x:Class="SellTickets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SellTickets"
+        mc:Ignorable="d"
+        Title="Дом культуры" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Добавить мероприятие" Name="addEvent" Click="addEvent_Click" Margin="5" Width="150"/>
+            <Button Content="Выдать билет" Name="buyTicket" Click="buyTicket_Click" Margin="5" Width="120"/>
+            <Button Content="Назад" Name="back" Click="back_Click" Margin="5" Width="120" Visibility="Collapsed"/>
+        </StackPanel>
+        <Frame Grid.Row="1" Name="mainFrame" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
